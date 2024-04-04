@@ -82,7 +82,7 @@ class SystemDataPrompter(AlpacaPrompter):
                 instruction=instruction
             )
         if output:
-            res = f"{res}{output}"
+            res = f"{res} {output}"
         yield res
 
 
