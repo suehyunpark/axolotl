@@ -7,7 +7,7 @@ load_in_4bit: false
 strict: false
 
 datasets:
-  - path: /mnt/nas/suehyun/mpa/preferences_v1_responses_for_training_default_system.jsonl
+  - path: /data/seongyun/open-instruct-2/augmented_diverse_response/preferences_v1_responses_for_training.jsonl
     type:
       system_prompt: ""
       system_format: "[INST] {system}\n"
@@ -20,10 +20,9 @@ datasets:
       
 dataset_prepared_path:
 # hf_use_auth_token: true
-# hub_model_id: kaist-ai/mpa-default-Mistral-7b-Instruct-v0.2-sft
-# hub_strategy: checkpoint
+# push_dataset_to_hub: kaist-ai/mpa_train
 # val_set_size: 0
-output_dir: /mnt/nas/suehyun/axolotl/outputs/mpa/default-system
+output_dir: /data/seongyun/axolotl/outputs/mpa2
 
 sequence_len: 8192
 sample_packing: true

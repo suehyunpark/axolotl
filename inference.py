@@ -65,9 +65,13 @@ def main(args):
         os.makedirs(output_dir)
     
     data = load_func(args.input)
-        
-    model = AutoModelForCausalLM.from_pretrained(args.model, token=args.token)
-    tokenizer = AutoTokenizer.from_pretrained(args.model, token=args.token)
+    
+    if os.path.exists(args.model):
+        model = AutoModelForCausalLM.from_pretrained(args.model, local_files_only=True)
+        tokenizer = AutoTokenizer.from_pretrained(args.model, local_files_only=True)
+    else:
+        model = AutoModelForCausalLM.from_pretrained(args.model, token=args.token)
+        tokenizer = AutoTokenizer.from_pretrained(args.model, token=args.token)
     
     # model, tokenizer = accelerator.prepare(model, tokenizer)
     device = f"cuda:{args.device_num}" if torch.cuda.is_available() else "cpu"

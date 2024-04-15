@@ -1,4 +1,4 @@
-base_model: alpindale/Mistral-7B-v0.2-hf
+base_model: mistralai/Mistral-7B-Instruct-v0.2
 model_type: MistralForCausalLM
 tokenizer_type: LlamaTokenizer
 
@@ -7,7 +7,7 @@ load_in_4bit: false
 strict: false
 
 datasets:
-  - path: /data/seongyun/open-instruct-2/augmented_diverse_response/preferences_v1_responses_for_training.jsonl
+  - path: /data/suehyun/mpa/data/train/preferences_v1_responses_for_training_default-system.jsonl
     type:
       system_prompt: ""
       system_format: "[INST] {system}\n"
@@ -19,10 +19,11 @@ datasets:
     # conversation: mistral
       
 dataset_prepared_path:
-hub_model_id: kaist-ai/mpa-Mistral-7b-v0.2-hf-sft
-hub_strategy: checkpoint
+# hf_use_auth_token: true
+# hub_model_id: kaist-ai/mpa-default-Mistral-7b-Instruct-v0.2-sft
+# hub_strategy: checkpoint
 # val_set_size: 0
-output_dir: /data/suehyun/axolotl/outputs/mpa/mistral-7b-v0.2-hf
+output_dir: /data/suehyun/axolotl/outputs/mpa/default-system
 
 sequence_len: 8192
 sample_packing: true
@@ -32,7 +33,7 @@ eval_sample_packing: false
 wandb_project: mpa
 wandb_entity: suehyun
 wandb_watch:
-wandb_name: mpa_mistral-7b-v0.2-hf
+wandb_name: mpa_default-system_mistral-7b
 wandb_log_model:
 
 gradient_accumulation_steps: 4

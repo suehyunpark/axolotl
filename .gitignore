@@ -3,6 +3,8 @@ configs
 last_run_prepared/
 .vscode
 _site/
+outputs/
+devtools/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
