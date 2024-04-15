@@ -1,6 +1,7 @@
 """
 Module for pydantic models for configuration
 """
+
 # pylint: disable=too-many-lines
 
 import logging
@@ -97,6 +98,7 @@ class SFTDataset(BaseModel):
     ds_type: Optional[str] = None
     train_on_split: Optional[str] = None
 
+    field: Optional[str] = None
     field_human: Optional[str] = None
     field_model: Optional[str] = None
 
@@ -140,6 +142,7 @@ class ChatTemplate(str, Enum):
     chatml = "chatml"  # pylint: disable=invalid-name
     inst = "inst"  # pylint: disable=invalid-name
     gemma = "gemma"  # pylint: disable=invalid-name
+    cohere = "cohere"  # pylint: disable=invalid-name
 
 
 class LoftQConfig(BaseModel):
@@ -240,17 +243,6 @@ class LoraConfig(BaseModel):
                     raise ValueError("Require cfg.load_in_4bit to be True for qlora")
         return self
 
-    @model_validator(mode="before")
-    @classmethod
-    def validate_quantized_dora(cls, data):
-        if data.get("peft_use_dora") and (
-            data.get("load_in_8bit") or data.get("load_in_4bit")
-        ):
-            raise ValueError(
-                "`peft_use_dora` is not currently compatible with quantized weights."
-            )
-        return data
-
 
 class ReLoRAConfig(BaseModel):
     """ReLoRA configuration subset"""
@@ -267,6 +259,7 @@ class ModelInputConfig(BaseModel):
 
     base_model: str
     base_model_config: Optional[str] = None
+    cls_model_config: Optional[str] = None
     tokenizer_config: Optional[str] = None
     tokenizer_use_fast: Optional[bool] = None
     tokenizer_legacy: Optional[bool] = None
@@ -656,6 +649,20 @@ class AxolotlInputConfig(
 
     @model_validator(mode="before")
     @classmethod
+    def check_sample_packing_wo_flash(cls, data):
+        if (
+            data.get("sample_packing")
+            and not data.get("flash_attention")
+            and not data.get("sdp_attention")
+        ):
+            LOG.warning(
+                "sample_packing without flash_attention or sdp_attention does not handle cross-attention."
+            )
+
+        return data
+
+    @model_validator(mode="before")
+    @classmethod
     def check_sample_packing_w_rl(cls, data):
         if data.get("sample_packing") and data.get("rl"):
             raise ValueError("`sample_packing: true` does not work with RLHF training")
@@ -965,9 +972,16 @@ class AxolotlInputConfig(
 
     @model_validator(mode="before")
     @classmethod
-    def check_fsdp_w_8bit_optimizer(cls, data):
-        if data.get("fsdp") and "bnb" in data.get("optimizer", ""):
-            raise ValueError(f"FSDP not compatible with {data.get('optimizer')}")
+    def check_fsdp_offload_w_8bit_optimizer(cls, data):
+        if (
+            data.get("fsdp")
+            and "8bit" in data.get("optimizer", "")
+            and data.get("fsdp_config")
+            and data["fsdp_config"].get("fsdp_offload_params")
+        ):
+            raise ValueError(
+                f"FSDP Offload not compatible with {data.get('optimizer')}"
+            )
         return data
 
     @model_validator(mode="before")
