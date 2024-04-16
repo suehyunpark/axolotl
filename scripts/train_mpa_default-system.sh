@@ -14,4 +14,4 @@ export WANDB_API_KEY="339cad8697ca8b7558010d3f8c4aa40788e64d12"
 export HF_TOKEN="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"
 
 # echo "Starting job"
-srun accelerate launch --main_process_port 0 -m axolotl.cli.train /mnt/nas/suehyun/axolotl/examples/mpa/default-system/mistral-7b.yml
+srun accelerate launch --main_process_port 29100 -m axolotl.cli.train /mnt/nas/suehyun/axolotl/examples/mpa/default-system/mistral-7b.yml

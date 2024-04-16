@@ -21,7 +21,7 @@ dataset_prepared_path:
 hub_model_id: kaist-ai/mpa-Mistral-7b-v0.2-hf-no-sys-sft
 hub_strategy: checkpoint
 # val_set_size: 0
-output_dir: /data/suehyun/axolotl/outputs/mpa/mistral-7b-v0.2-hf-no-sys-sft
+output_dir: /mnt/nas/suehyun/axolotl/outputs/mpa/mistral-7b-v0.2-hf-no-sys-sft
 
 sequence_len: 8192
 sample_packing: true
