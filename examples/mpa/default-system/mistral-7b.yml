@@ -7,7 +7,7 @@ load_in_4bit: false
 strict: false
 
 datasets:
-  - path: /mnt/nas/suehyun/mpa/preferences_v1_responses_for_training_default_system.jsonl
+  - path: /data/suehyun/mpa/preferences_v1_responses_for_training_default_system.jsonl
     type:
       system_prompt: ""
       system_format: "[INST] {system}\n"
