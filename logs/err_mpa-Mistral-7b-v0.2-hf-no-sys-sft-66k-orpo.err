@@ -1,0 +1,87 @@
+srun: error: NodeNames=localhost CPUs=# or Procs=# with Boards=# is invalid and is ignored.
+/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/mnt/nas/suehyun/axolotl/src/axolotl/cli/train.py", line 59, in <module>
+    fire.Fire(do_cli)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/fire/core.py", line 143, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/fire/core.py", line 477, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/fire/core.py", line 693, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/mnt/nas/suehyun/axolotl/src/axolotl/cli/train.py", line 35, in do_cli
+    return do_train(parsed_cfg, parsed_cli_args)
+  File "/mnt/nas/suehyun/axolotl/src/axolotl/cli/train.py", line 51, in do_train
+    dataset_meta = load_rl_datasets(cfg=cfg, cli_args=cli_args)
+  File "/mnt/nas/suehyun/axolotl/src/axolotl/cli/__init__.py", line 431, in load_rl_datasets
+    train_dataset, eval_dataset = load_prepare_dpo_datasets(cfg)
+  File "/mnt/nas/suehyun/axolotl/src/axolotl/utils/data/rl.py", line 114, in load_prepare_dpo_datasets
+    train_dataset = load_split(cfg.datasets, cfg)
+  File "/mnt/nas/suehyun/axolotl/src/axolotl/utils/data/rl.py", line 72, in load_split
+    ds = load_dataset(  # pylint: disable=invalid-name
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/datasets/load.py", line 2538, in load_dataset
+    if Path(path, config.DATASET_STATE_JSON_FILENAME).exists():
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/pathlib.py", line 960, in __new__
+    self = cls._from_parts(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/pathlib.py", line 594, in _from_parts
+    drv, root, parts = self._parse_args(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/pathlib.py", line 578, in _parse_args
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+[2024-04-22 11:54:29,532] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3585408 closing signal SIGTERM
+[2024-04-22 11:54:29,532] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3585409 closing signal SIGTERM
+[2024-04-22 11:54:29,533] torch.distributed.elastic.multiprocessing.api: [WARNING] Sending process 3585410 closing signal SIGTERM
+[2024-04-22 11:54:30,413] torch.distributed.elastic.multiprocessing.api: [ERROR] failed (exitcode: 1) local_rank: 0 (pid: 3585407) of binary: /home/suehyun/.conda/envs/mpa/bin/python
+Traceback (most recent call last):
+  File "/home/suehyun/.conda/envs/mpa/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1048, in launch_command
+    multi_gpu_launcher(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/launch.py", line 702, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/run.py", line 803, in run
+    elastic_launch(
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+axolotl.cli.train FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-04-22_11:54:29
+  host      : aigpu01
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3585407)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: localhost: task 0: Exited with exit code 1

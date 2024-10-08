@@ -1,0 +1,24 @@
+srun: error: NodeNames=localhost CPUs=# or Procs=# with Boards=# is invalid and is ignored.
+/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+Traceback (most recent call last):
+  File "/home/suehyun/.conda/envs/mpa/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1048, in launch_command
+    multi_gpu_launcher(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/launch.py", line 681, in multi_gpu_launcher
+    current_env = prepare_multi_gpu_env(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/utils/launch.py", line 176, in prepare_multi_gpu_env
+    raise ConnectionError(
+ConnectionError: Tried to launch distributed communication on port `29500`, but another process is utilizing it. Please specify a different port (such as using the `--main_process_port` flag or specifying a different `main_process_port` in your config file) and rerun your script. To automatically use the next open port (on a single node), you can set this to `0`.
+srun: error: localhost: task 0: Exited with exit code 1

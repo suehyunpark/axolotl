@@ -1,0 +1,47 @@
+srun: error: NodeNames=localhost CPUs=# or Procs=# with Boards=# is invalid and is ignored.
+/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `4`
+		More than one GPU was found, enabling multi-GPU training.
+		If this was unintended please pass in `--num_processes=1`.
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+[W socket.cpp:464] [c10d] The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use).
+[W socket.cpp:464] [c10d] The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+[E socket.cpp:500] [c10d] The server socket has failed to listen on any local network address.
+Traceback (most recent call last):
+  File "/home/suehyun/.conda/envs/mpa/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/accelerate_cli.py", line 46, in main
+    args.func(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/launch.py", line 1048, in launch_command
+    multi_gpu_launcher(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/accelerate/commands/launch.py", line 702, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/run.py", line 803, in run
+    elastic_launch(
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 135, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 259, in launch_agent
+    result = agent.run()
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 727, in run
+    result = self._invoke_run(role)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 862, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 699, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 123, in wrapper
+    result = f(*args, **kwargs)
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 542, in _rendezvous
+    store, group_rank, group_world_size = spec.rdzv_handler.next_rendezvous()
+  File "/home/suehyun/.conda/envs/mpa/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 55, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+torch.distributed.DistNetworkError: The server socket has failed to listen on any local network address. The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use). The server socket has failed to bind to ?UNKNOWN? (errno: 98 - Address already in use).
+srun: error: localhost: task 0: Exited with exit code 1

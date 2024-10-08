@@ -1,0 +1,136 @@
+[2024-04-18 21:35:09,906] [INFO] [datasets.<module>:58] [PID:146508] PyTorch version 2.2.2 available.
+[2024-04-18 21:35:09,906] [INFO] [datasets.<module>:58] [PID:146507] PyTorch version 2.2.2 available.
+[2024-04-18 21:35:09,906] [INFO] [datasets.<module>:58] [PID:146509] PyTorch version 2.2.2 available.
+[2024-04-18 21:35:09,906] [INFO] [datasets.<module>:58] [PID:146510] PyTorch version 2.2.2 available.
+[2024-04-18 21:35:10,800] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-18 21:35:10,801] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-18 21:35:10,803] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-18 21:35:10,806] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-18 21:35:11,806] [DEBUG] [axolotl.normalize_config:79] [PID:146508] [RANK:1] bf16 support detected, enabling for this configuration.[39m
+[2024-04-18 21:35:11,813] [DEBUG] [axolotl.normalize_config:79] [PID:146509] [RANK:2] bf16 support detected, enabling for this configuration.[39m
+[2024-04-18 21:35:11,818] [DEBUG] [axolotl.normalize_config:79] [PID:146507] [RANK:0] bf16 support detected, enabling for this configuration.[39m
+[2024-04-18 21:35:11,988] [DEBUG] [axolotl.normalize_config:79] [PID:146510] [RANK:3] bf16 support detected, enabling for this configuration.[39m
+[2024-04-18 21:35:12,520] [INFO] [axolotl.normalize_config:182] [PID:146509] [RANK:2] GPU memory usage baseline: 0.000GB (+0.855GB misc)[39m
+[2024-04-18 21:35:12,520] [INFO] [axolotl.normalize_config:182] [PID:146508] [RANK:1] GPU memory usage baseline: 0.000GB (+0.855GB misc)[39m
+[2024-04-18 21:35:12,520] [INFO] [axolotl.normalize_config:182] [PID:146507] [RANK:0] GPU memory usage baseline: 0.000GB (+0.855GB misc)[39m
+[2024-04-18 21:35:12,521] [INFO] [axolotl.normalize_config:182] [PID:146510] [RANK:3] GPU memory usage baseline: 0.000GB (+0.855GB misc)[39m
+                                 dP            dP   dP 
+                                 88            88   88 
+      .d8888b. dP.  .dP .d8888b. 88 .d8888b. d8888P 88 
+      88'  `88  `8bd8'  88'  `88 88 88'  `88   88   88 
+      88.  .88  .d88b.  88.  .88 88 88.  .88   88   88 
+      `88888P8 dP'  `dP `88888P' dP `88888P'   dP   dP 
+                                                       
+                                                       
+
+****************************************
+**** Axolotl Dependency Versions *****
+  accelerate: 0.28.0         
+        peft: 0.10.0         
+transformers: 4.40.0.dev0    
+         trl: 0.8.2.dev0     
+       torch: 2.2.2          
+bitsandbytes: 0.43.0         
+****************************************
+[2024-04-18 21:35:17,118] [DEBUG] [axolotl.load_tokenizer:277] [PID:146507] [RANK:0] EOS: 2 / </s>[39m
+[2024-04-18 21:35:17,118] [DEBUG] [axolotl.load_tokenizer:278] [PID:146507] [RANK:0] BOS: 1 / <s>[39m
+[2024-04-18 21:35:17,118] [DEBUG] [axolotl.load_tokenizer:279] [PID:146507] [RANK:0] PAD: 2 / </s>[39m
+[2024-04-18 21:35:17,118] [DEBUG] [axolotl.load_tokenizer:280] [PID:146507] [RANK:0] UNK: 0 / <unk>[39m
+[2024-04-18 21:35:17,118] [INFO] [axolotl.load_tokenizer:291] [PID:146507] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-04-18 21:35:17,118] [INFO] [axolotl.load_tokenized_prepared_datasets:183] [PID:146507] [RANK:0] Unable to find prepared dataset in last_run_prepared/1bfc69452c05314eb90a9a8fbefa0e36[39m
+[2024-04-18 21:35:17,118] [INFO] [axolotl.load_tokenized_prepared_datasets:184] [PID:146507] [RANK:0] Loading raw datasets...[39m
+[33m[2024-04-18 21:35:17,118] [WARNING] [axolotl.load_tokenized_prepared_datasets:186] [PID:146507] [RANK:0] Processing datasets during training can lead to VRAM instability. Please pre-process your dataset.[39m
+[2024-04-18 21:35:17,118] [INFO] [axolotl.load_tokenized_prepared_datasets:193] [PID:146507] [RANK:0] No seed provided, using default seed of 42[39m
+[2024-04-18 21:35:30,760] [DEBUG] [axolotl.load_tokenizer:277] [PID:146509] [RANK:2] EOS: 2 / </s>[39m
+[2024-04-18 21:35:30,760] [DEBUG] [axolotl.load_tokenizer:278] [PID:146509] [RANK:2] BOS: 1 / <s>[39m
+[2024-04-18 21:35:30,760] [DEBUG] [axolotl.load_tokenizer:279] [PID:146509] [RANK:2] PAD: 2 / </s>[39m
+[2024-04-18 21:35:30,760] [DEBUG] [axolotl.load_tokenizer:280] [PID:146509] [RANK:2] UNK: 0 / <unk>[39m
+[2024-04-18 21:35:30,760] [INFO] [axolotl.load_tokenizer:291] [PID:146509] [RANK:2] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-04-18 21:35:30,875] [DEBUG] [axolotl.load_tokenizer:277] [PID:146510] [RANK:3] EOS: 2 / </s>[39m
+[2024-04-18 21:35:30,875] [DEBUG] [axolotl.load_tokenizer:278] [PID:146510] [RANK:3] BOS: 1 / <s>[39m
+[2024-04-18 21:35:30,875] [DEBUG] [axolotl.load_tokenizer:279] [PID:146510] [RANK:3] PAD: 2 / </s>[39m
+[2024-04-18 21:35:30,875] [DEBUG] [axolotl.load_tokenizer:280] [PID:146510] [RANK:3] UNK: 0 / <unk>[39m
+[2024-04-18 21:35:30,875] [INFO] [axolotl.load_tokenizer:291] [PID:146510] [RANK:3] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-04-18 21:35:31,164] [DEBUG] [axolotl.load_tokenizer:277] [PID:146508] [RANK:1] EOS: 2 / </s>[39m
+[2024-04-18 21:35:31,164] [DEBUG] [axolotl.load_tokenizer:278] [PID:146508] [RANK:1] BOS: 1 / <s>[39m
+[2024-04-18 21:35:31,164] [DEBUG] [axolotl.load_tokenizer:279] [PID:146508] [RANK:1] PAD: 2 / </s>[39m
+[2024-04-18 21:35:31,164] [DEBUG] [axolotl.load_tokenizer:280] [PID:146508] [RANK:1] UNK: 0 / <unk>[39m
+[2024-04-18 21:35:31,164] [INFO] [axolotl.load_tokenizer:291] [PID:146508] [RANK:1] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[33m[2024-04-18 21:36:11,656] [WARNING] [axolotl._tokenize:66] [PID:153388] [RANK:0] Empty text requested for tokenization.[39m
+[33m[2024-04-18 21:36:12,036] [WARNING] [axolotl._tokenize:66] [PID:153482] [RANK:0] Empty text requested for tokenization.[39m
+[2024-04-18 21:36:18,113] [INFO] [axolotl.load_tokenized_prepared_datasets:410] [PID:146507] [RANK:0] merging datasets[39m
+[2024-04-18 21:36:18,119] [INFO] [axolotl.log:61] [PID:146507] [RANK:0] dropping attention_mask column[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:183] [PID:146508] [RANK:1] Unable to find prepared dataset in last_run_prepared/1bfc69452c05314eb90a9a8fbefa0e36[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:183] [PID:146509] [RANK:2] Unable to find prepared dataset in last_run_prepared/1bfc69452c05314eb90a9a8fbefa0e36[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:184] [PID:146508] [RANK:1] Loading raw datasets...[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:184] [PID:146509] [RANK:2] Loading raw datasets...[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:183] [PID:146510] [RANK:3] Unable to find prepared dataset in last_run_prepared/1bfc69452c05314eb90a9a8fbefa0e36[39m
+[33m[2024-04-18 21:36:57,485] [WARNING] [axolotl.load_tokenized_prepared_datasets:186] [PID:146508] [RANK:1] Processing datasets during training can lead to VRAM instability. Please pre-process your dataset.[39m
+[33m[2024-04-18 21:36:57,485] [WARNING] [axolotl.load_tokenized_prepared_datasets:186] [PID:146509] [RANK:2] Processing datasets during training can lead to VRAM instability. Please pre-process your dataset.[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:184] [PID:146510] [RANK:3] Loading raw datasets...[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:193] [PID:146508] [RANK:1] No seed provided, using default seed of 42[39m
+[2024-04-18 21:36:57,485] [INFO] [axolotl.load_tokenized_prepared_datasets:193] [PID:146509] [RANK:2] No seed provided, using default seed of 42[39m
+[33m[2024-04-18 21:36:57,485] [WARNING] [axolotl.load_tokenized_prepared_datasets:186] [PID:146510] [RANK:3] Processing datasets during training can lead to VRAM instability. Please pre-process your dataset.[39m
+[2024-04-18 21:36:57,486] [INFO] [axolotl.load_tokenized_prepared_datasets:193] [PID:146510] [RANK:3] No seed provided, using default seed of 42[39m
+[2024-04-18 21:36:57,486] [INFO] [axolotl.load_tokenized_prepared_datasets:423] [PID:146507] [RANK:0] Saving merged prepared dataset to disk... last_run_prepared/1bfc69452c05314eb90a9a8fbefa0e36[39m
+[2024-04-18 21:36:58,587] [INFO] [axolotl.load_tokenized_prepared_datasets:410] [PID:146509] [RANK:2] merging datasets[39m
+[2024-04-18 21:36:58,624] [INFO] [axolotl.load_tokenized_prepared_datasets:410] [PID:146508] [RANK:1] merging datasets[39m
+[2024-04-18 21:36:58,647] [INFO] [axolotl.load_tokenized_prepared_datasets:410] [PID:146510] [RANK:3] merging datasets[39m
+[2024-04-18 21:44:13,369] [DEBUG] [axolotl.log:61] [PID:146507] [RANK:0] total_num_tokens: 45_048_715[39m
+[2024-04-18 21:44:13,951] [DEBUG] [axolotl.log:61] [PID:146507] [RANK:0] `total_supervised_tokens: 33_368_341`[39m
+[2024-04-18 21:44:20,267] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146507] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:44:20,267] [DEBUG] [axolotl.log:61] [PID:146507] [RANK:0] data_loader_len: 84[39m
+[2024-04-18 21:44:22,201] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146508] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:44:22,228] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146509] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:44:22,290] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146510] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:44:28,929] [INFO] [axolotl.log:61] [PID:146507] [RANK:0] sample_packing_eff_est across ranks: [0.9702030420303345, 0.9712311625480652, 0.9715743064880371, 0.9712311625480652][39m
+[2024-04-18 21:44:28,931] [DEBUG] [axolotl.log:61] [PID:146507] [RANK:0] sample_packing_eff_est: 0.98[39m
+[2024-04-18 21:44:28,931] [DEBUG] [axolotl.log:61] [PID:146507] [RANK:0] total_num_steps: 84[39m
+[2024-04-18 21:44:28,941] [DEBUG] [axolotl.train.log:61] [PID:146507] [RANK:0] loading tokenizer... alpindale/Mistral-7B-v0.2-hf[39m
+[2024-04-18 21:44:29,953] [DEBUG] [axolotl.load_tokenizer:277] [PID:146510] [RANK:3] EOS: 2 / </s>[39m
+[2024-04-18 21:44:29,953] [DEBUG] [axolotl.load_tokenizer:278] [PID:146510] [RANK:3] BOS: 1 / <s>[39m
+[2024-04-18 21:44:29,953] [DEBUG] [axolotl.load_tokenizer:279] [PID:146510] [RANK:3] PAD: 2 / </s>[39m
+[2024-04-18 21:44:29,953] [DEBUG] [axolotl.load_tokenizer:280] [PID:146510] [RANK:3] UNK: 0 / <unk>[39m
+[2024-04-18 21:44:29,953] [INFO] [axolotl.load_tokenizer:291] [PID:146510] [RANK:3] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-04-18 21:44:29,982] [DEBUG] [axolotl.load_tokenizer:277] [PID:146509] [RANK:2] EOS: 2 / </s>[39m
+[2024-04-18 21:44:29,982] [DEBUG] [axolotl.load_tokenizer:278] [PID:146509] [RANK:2] BOS: 1 / <s>[39m
+[2024-04-18 21:44:29,983] [DEBUG] [axolotl.load_tokenizer:279] [PID:146509] [RANK:2] PAD: 2 / </s>[39m
+[2024-04-18 21:44:29,983] [DEBUG] [axolotl.load_tokenizer:280] [PID:146509] [RANK:2] UNK: 0 / <unk>[39m
+[2024-04-18 21:44:29,983] [INFO] [axolotl.load_tokenizer:291] [PID:146509] [RANK:2] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-04-18 21:44:30,102] [DEBUG] [axolotl.load_tokenizer:277] [PID:146507] [RANK:0] EOS: 2 / </s>[39m
+[2024-04-18 21:44:30,102] [DEBUG] [axolotl.load_tokenizer:278] [PID:146507] [RANK:0] BOS: 1 / <s>[39m
+[2024-04-18 21:44:30,102] [DEBUG] [axolotl.load_tokenizer:279] [PID:146507] [RANK:0] PAD: 2 / </s>[39m
+[2024-04-18 21:44:30,102] [DEBUG] [axolotl.load_tokenizer:280] [PID:146507] [RANK:0] UNK: 0 / <unk>[39m
+[2024-04-18 21:44:30,102] [INFO] [axolotl.load_tokenizer:291] [PID:146507] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-04-18 21:44:30,102] [DEBUG] [axolotl.train.log:61] [PID:146507] [RANK:0] loading model[39m
+[2024-04-18 21:44:30,104] [WARNING] [accelerate.utils.other.log:61] [PID:146507] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2024-04-18 21:44:30,136] [DEBUG] [axolotl.load_tokenizer:277] [PID:146508] [RANK:1] EOS: 2 / </s>[39m
+[2024-04-18 21:44:30,136] [DEBUG] [axolotl.load_tokenizer:278] [PID:146508] [RANK:1] BOS: 1 / <s>[39m
+[2024-04-18 21:44:30,136] [DEBUG] [axolotl.load_tokenizer:279] [PID:146508] [RANK:1] PAD: 2 / </s>[39m
+[2024-04-18 21:44:30,136] [DEBUG] [axolotl.load_tokenizer:280] [PID:146508] [RANK:1] UNK: 0 / <unk>[39m
+[2024-04-18 21:44:30,136] [INFO] [axolotl.load_tokenizer:291] [PID:146508] [RANK:1] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-04-18 21:44:30,390] [INFO] [axolotl.load_model:397] [PID:146510] [RANK:3] patching mistral with flash attention[39m
+[2024-04-18 21:44:30,415] [INFO] [axolotl.load_model:397] [PID:146509] [RANK:2] patching mistral with flash attention[39m
+[2024-04-18 21:44:30,538] [INFO] [axolotl.load_model:397] [PID:146507] [RANK:0] patching mistral with flash attention[39m
+[2024-04-18 21:44:31,235] [INFO] [axolotl.load_model:397] [PID:146508] [RANK:1] patching mistral with flash attention[39m
+[2024-04-18 21:51:22,740] [INFO] [axolotl.load_model:715] [PID:146510] [RANK:3] GPU memory usage after model load: 13.989GB (+0.251GB cache, +3.218GB misc)[39m
+[2024-04-18 21:51:22,765] [INFO] [axolotl.load_model:775] [PID:146510] [RANK:3] converting modules to torch.bfloat16 for flash attention[39m
+[2024-04-18 21:51:22,815] [INFO] [axolotl.load_model:715] [PID:146509] [RANK:2] GPU memory usage after model load: 13.989GB (+0.251GB cache, +3.359GB misc)[39m
+[2024-04-18 21:51:22,821] [INFO] [axolotl.load_model:715] [PID:146508] [RANK:1] GPU memory usage after model load: 13.989GB (+0.251GB cache, +3.359GB misc)[39m
+[2024-04-18 21:51:22,828] [INFO] [axolotl.load_model:715] [PID:146507] [RANK:0] GPU memory usage after model load: 13.989GB (+0.251GB cache, +3.593GB misc)[39m
+[2024-04-18 21:51:22,850] [INFO] [axolotl.load_model:775] [PID:146509] [RANK:2] converting modules to torch.bfloat16 for flash attention[39m
+[2024-04-18 21:51:22,859] [INFO] [axolotl.load_model:775] [PID:146507] [RANK:0] converting modules to torch.bfloat16 for flash attention[39m
+[2024-04-18 21:51:22,866] [INFO] [axolotl.load_model:775] [PID:146508] [RANK:1] converting modules to torch.bfloat16 for flash attention[39m
+[2024-04-18 21:51:23,115] [WARNING] [accelerate.utils.other.log:61] [PID:146507] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[2024-04-18 21:51:23,765] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146509] [RANK:2] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,769] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146510] [RANK:3] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,769] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146508] [RANK:1] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,793] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146509] [RANK:2] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,796] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146510] [RANK:3] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,797] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146508] [RANK:1] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,820] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146509] [RANK:2] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,824] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146510] [RANK:3] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,824] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146508] [RANK:1] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,847] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146509] [RANK:2] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,851] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146510] [RANK:3] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m
+[2024-04-18 21:51:23,852] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:146508] [RANK:1] packing_efficiency_estimate: 0.98 total_num_tokens per device: 11262178[39m

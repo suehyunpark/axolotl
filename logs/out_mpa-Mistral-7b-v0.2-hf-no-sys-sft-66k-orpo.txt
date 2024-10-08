@@ -1,0 +1,38 @@
+[2024-04-22 11:54:19,874] [INFO] [datasets.<module>:58] [PID:3585409] PyTorch version 2.2.2 available.
+[2024-04-22 11:54:19,937] [INFO] [datasets.<module>:58] [PID:3585407] PyTorch version 2.2.2 available.
+[2024-04-22 11:54:19,978] [INFO] [datasets.<module>:58] [PID:3585408] PyTorch version 2.2.2 available.
+[2024-04-22 11:54:20,001] [INFO] [datasets.<module>:58] [PID:3585410] PyTorch version 2.2.2 available.
+[2024-04-22 11:54:21,094] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-22 11:54:21,096] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-22 11:54:21,097] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-22 11:54:21,098] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-22 11:54:22,018] [DEBUG] [axolotl.normalize_config:79] [PID:3585409] [RANK:2] bf16 support detected, enabling for this configuration.[39m
+[2024-04-22 11:54:22,046] [DEBUG] [axolotl.normalize_config:79] [PID:3585407] [RANK:0] bf16 support detected, enabling for this configuration.[39m
+[2024-04-22 11:54:22,056] [DEBUG] [axolotl.normalize_config:79] [PID:3585408] [RANK:1] bf16 support detected, enabling for this configuration.[39m
+[2024-04-22 11:54:22,154] [DEBUG] [axolotl.normalize_config:79] [PID:3585410] [RANK:3] bf16 support detected, enabling for this configuration.[39m
+[2024-04-22 11:54:23,513] [INFO] [axolotl.normalize_config:182] [PID:3585408] [RANK:1] GPU memory usage baseline: 0.000GB (+61.136GB misc)[39m
+[2024-04-22 11:54:23,514] [INFO] [axolotl.normalize_cfg_datasets:199] [PID:3585408] [RANK:1] updating dataset None with `chat_template: chatml` to match your chat_template[39m
+[2024-04-22 11:54:23,779] [INFO] [axolotl.normalize_config:182] [PID:3585409] [RANK:2] GPU memory usage baseline: 0.000GB (+61.404GB misc)[39m
+[2024-04-22 11:54:23,779] [INFO] [axolotl.normalize_cfg_datasets:199] [PID:3585409] [RANK:2] updating dataset None with `chat_template: chatml` to match your chat_template[39m
+[2024-04-22 11:54:24,055] [INFO] [axolotl.normalize_config:182] [PID:3585410] [RANK:3] GPU memory usage baseline: 0.000GB (+60.843GB misc)[39m
+[2024-04-22 11:54:24,055] [INFO] [axolotl.normalize_cfg_datasets:199] [PID:3585410] [RANK:3] updating dataset None with `chat_template: chatml` to match your chat_template[39m
+[2024-04-22 11:54:24,090] [INFO] [axolotl.normalize_config:182] [PID:3585407] [RANK:0] GPU memory usage baseline: 0.000GB (+65.929GB misc)[39m
+[2024-04-22 11:54:24,090] [INFO] [axolotl.normalize_cfg_datasets:199] [PID:3585407] [RANK:0] updating dataset None with `chat_template: chatml` to match your chat_template[39m
+                                 dP            dP   dP 
+                                 88            88   88 
+      .d8888b. dP.  .dP .d8888b. 88 .d8888b. d8888P 88 
+      88'  `88  `8bd8'  88'  `88 88 88'  `88   88   88 
+      88.  .88  .d88b.  88.  .88 88 88.  .88   88   88 
+      `88888P8 dP'  `dP `88888P' dP `88888P'   dP   dP 
+                                                       
+                                                       
+
+****************************************
+**** Axolotl Dependency Versions *****
+  accelerate: 0.28.0         
+        peft: 0.10.0         
+transformers: 4.40.0.dev0    
+         trl: 0.8.2.dev0     
+       torch: 2.2.2          
+bitsandbytes: 0.43.0         
+****************************************
