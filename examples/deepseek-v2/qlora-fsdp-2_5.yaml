@@ -1,4 +1,7 @@
 base_model: axolotl-quants/DeepSeek-V2.5-bnb-nf4-bf16
+# Automatically upload checkpoint and final model to HF
+# hub_model_id: username/custom_model_name
+
 trust_remote_code: true
 
 load_in_8bit: false
@@ -9,14 +12,18 @@ strict: false
 plugins:
   - axolotl.integrations.liger.LigerPlugin
 liger_rms_norm: true
-liger_swiglu: true
+liger_glu_activation: true
 liger_fused_linear_cross_entropy: true
 
 chat_template: deepseek_v2
 datasets:
   - path: mlabonne/FineTome-100k
     type: chat_template
-    split: train
+    split: train[:20%]
+    field_messages: conversations
+    message_property_mappings:
+      role: from
+      content: value
 
 dataset_prepared_path: last_run_prepared
 val_set_size: 0.0
@@ -41,7 +48,7 @@ peft_use_rslora: true
 gradient_accumulation_steps: 1
 micro_batch_size: 8
 num_epochs: 1
-optimizer: adamw_torch
+optimizer: adamw_torch_fused
 lr_scheduler: cosine
 learning_rate: 2e-5
 

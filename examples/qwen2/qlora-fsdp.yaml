@@ -1,4 +1,7 @@
 base_model: Qwen/Qwen2-7B
+# Automatically upload checkpoint and final model to HF
+# hub_model_id: username/custom_model_name
+
 trust_remote_code: true
 
 load_in_8bit: false
@@ -34,7 +37,7 @@ wandb_log_model:
 gradient_accumulation_steps: 4
 micro_batch_size: 1
 num_epochs: 4
-optimizer: adamw_torch
+optimizer: adamw_torch_fused
 lr_scheduler: cosine
 learning_rate: 0.0002
 
